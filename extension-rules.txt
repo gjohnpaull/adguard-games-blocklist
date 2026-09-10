@@ -35,12 +35,39 @@ www.google.com#?#div:has(> div > h2:contains(Games from Google))
 ||google.com/fbx*$document
 ||google.com/logos/fnbx/*
 
-! --- NOT RECOMMENDED: block the search query itself ----------------------
-! This is what was originally asked for. It is left disabled because it is
-! trivially defeated - "gaming", "play games", "free games", image search,
-! Bing or DuckDuckGo all walk straight past it - while also blocking
-! legitimate searches that happen to contain the word.
-! The carousel rule above is strictly better: it kills the games regardless
-! of what was typed.
-! ||google.com/search?q=games$document
-! ||google.com/search?*q=*games*$document
+! --- BLOCK THE SEARCH URL ITSELF ---------------------------------------
+! Requested explicitly. Syntax verified against
+! https://adguard.com/kb/general/ad-filtering/create-own-filters/ :
+!   "|"         = "pointer to the beginning ... of address"
+!   "$document" = "explicitly enables blocking of main frame document
+!                  requests" (without it, page navigations are not blocked)
+!   "*"         = "any set of characters ... can also be an empty string"
+!
+! NOT executed against a live AdGuard install - none is present on this
+! machine. Syntax is doc-verified; matching behaviour is reasoned from the
+! documented semantics above.
+
+! 1. Literal prefix, exactly as asked.
+|https://www.google.com/search?q=games$document
+
+! 2. Recommended instead of #1. Handles the cases #1 misses: non-www,
+!    and a query where q= is not the first parameter (Google reorders these).
+!    Real observed URL: /search?q=games&num=10&sca_esv=... - #1 catches that
+!    one, but /search?sca_esv=...&q=games would slip past it. "*" matching an
+!    empty string means this covers both.
+||google.com/search?*q=games$document
+
+! 3. Your regional Google. Chrome sends searches to the local domain, so
+!    without this the .com rules are trivially sidestepped.
+||google.ae/search?*q=games$document
+
+! 4. Precise variant. Rules 1-3 match by prefix, so they ALSO block
+!    q=gamestop, q=games2 and q=gamespot. This regex requires "games" to be
+!    the whole value. Use INSTEAD of 1-3 if that over-blocking bothers you.
+! /^https?:\/\/(www\.)?google\.[a-z.]+\/search\?.*[?&]q=games(&|$)/$document
+
+! Known limits of all of the above, stated plainly:
+!   - "gaming", "play games", "free games" are different queries and pass.
+!   - Bing, DuckDuckGo, Yahoo and image search are untouched.
+!   - This is why the cosmetic carousel rule above is the better lever: it
+!     fires on any query that surfaces the games, not one exact string.
