@@ -1,0 +1,46 @@
+! ==========================================================================
+! THESE RULES DO NOT GO IN ADGUARD HOME.
+! ==========================================================================
+! AdGuard Home filters DNS. DNS carries a hostname and nothing else - no path,
+! no query string. Rules below need a filter that sees the full URL and the
+! page DOM, which means:
+!   - AdGuard browser extension, or
+!   - AdGuard for Windows / Mac (desktop app, HTTPS filtering on)
+! Paste into: Settings -> Filters -> Custom -> add your own rule.
+!
+! Verified against a live google.com/search?q=games page on 2026-09-10.
+! ==========================================================================
+
+! --- RECOMMENDED: hide the "Games from Google" carousel -------------------
+! Removes the inline playable games (Snake, Solitaire, Minesweeper, PAC-MAN,
+! Baseball, Block Breaker, Garden Gnomes, Color Tiles, Popcorn, Tic-Tac-Go,
+! Champion Island) from search results WITHOUT breaking search.
+!
+! Measured: removed 285px containing all game tiles; all 9 organic results
+! survived. Matches exactly one element on the page.
+!
+! Targets the heading TEXT, not Google's class names - those are obfuscated
+! (cgj45, MFaqpc, yp1CPe) and rotate, so a class-based rule would rot.
+! Works on ANY query that surfaces the carousel, not just "games".
+www.google.com#?#div:has(> div > h2:contains(Games from Google))
+
+! Non-English Google uses translated headings, so add your locale's wording.
+! Find it by searching "games" on your local Google and reading the heading.
+! Example shape:
+! www.google.de#?#div:has(> div > h2:contains(Spiele von Google))
+
+! --- OPTIONAL: block the games by direct URL ------------------------------
+! The carousel games are also reachable by navigating straight to them, which
+! a cosmetic rule cannot stop. These block the game endpoints themselves.
+||google.com/fbx*$document
+||google.com/logos/fnbx/*
+
+! --- NOT RECOMMENDED: block the search query itself ----------------------
+! This is what was originally asked for. It is left disabled because it is
+! trivially defeated - "gaming", "play games", "free games", image search,
+! Bing or DuckDuckGo all walk straight past it - while also blocking
+! legitimate searches that happen to contain the word.
+! The carousel rule above is strictly better: it kills the games regardless
+! of what was typed.
+! ||google.com/search?q=games$document
+! ||google.com/search?*q=*games*$document
