@@ -56,18 +56,29 @@ Also switch on **Filters → Blocked services → Gaming** (22 services, 242 rul
 Steam, Roblox, Epic, Nintendo, PlayStation, Xbox Live, Battle.net…). It is free,
 needs no maintenance, and covers the launcher axis no blocklist does.
 
-## Verify the TLD rule before relying on it
+## The TLD rule is confirmed working
 
-`src/aggressive-tlds.txt` uses `||io^$denyallow=…`. This is documented for DNS
-filtering but AdGuard's *ad blocker* docs state a `$denyallow` pattern "cannot
-start with `||`" — two engines, two docs that disagree. Confirm on your own
-instance: **Settings → Check the filtering**, enter `bloxd.io` (expect blocked)
-and `docker.io` (expect not blocked).
+`src/aggressive-tlds.txt` uses `||io^$denyallow=…`. AdGuard's DNS docs document
+this form; AdGuard's *ad blocker* docs state a `$denyallow` pattern "cannot start
+with `||`". Two engines, two docs that disagree — so it was worth testing rather
+than assuming.
 
-If it does not work, the fallback is a bare `||io^` plus `@@||docker.io^`
-exception rules, compiled with `ValidateAllowPublicSuffix` instead of
-`Validate`. Note that a plain `@@` can be overridden by an upstream
-`$important` rule, which is why `$denyallow` is preferred.
+**Verified on a live AdGuard Home instance, 2026-09-10.** 12/12 as intended:
+
+| Domain | Result |
+|---|---|
+| `docker.io`, `k8s.io`, `sentry.io`, `github.io`, `portainer.io`, `min.io` | resolve normally |
+| `bloxd.io`, `krunker.io`, `agar.io`, `smashkarts.io`, `itch.io` | `0.0.0.0` |
+| `somerandomthing12345.io` — in no list at all | `0.0.0.0` |
+
+That last row is the point: the TLD rule blocks `.io` domains that do not appear
+in any blocklist, including ones registered after this list was built, while the
+`$denyallow` exemptions still resolve. **For AdGuard Home, the DNS doc governs.**
+
+Fallback, no longer needed but recorded: a bare `||io^` plus `@@||docker.io^`
+exceptions, compiled with `ValidateAllowPublicSuffix` instead of `Validate`. A
+plain `@@` can be overridden by an upstream `$important` rule, which is why
+`$denyallow` is preferred anyway.
 
 ## Layout
 
