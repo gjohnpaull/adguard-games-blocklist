@@ -1,0 +1,73 @@
+! Web-proxy / "unblocker" frontends - the primary route around a DNS filter.
+! All DNS-verified live against 1.1.1.1 on 2026-09-10.
+! Several are tab-cloaked: lunaron.top, tetosarcade.win and phi.bz render a
+! fake IXL page; luminal.lol renders a fake Harvard Canvas page.
+invisiproxy.com
+definitelyscience.com
+lunaron.top
+terbiumux.net
+terbiumon.top
+tetosarcade.win
+phi.bz
+luminal.lol
+luminal.click
+strawberryv2.sbs
+ghostylts.org
+tinf0il.site
+trickybird.com
+milklookupguide.com
+titaniumnetwork.org
+holyubofficial.net
+anura.pro
+truffled.lol
+daydreamx.pro
+nebulaproxy.io
+nebulaservices.org
+gointospace.app
+kazwire.com
+boltunblocker.com
+velara.cc
+velara.buzz
+noblocc.com
+noblocc.co.uk
+studyhub.cam
+shuttlemath.com
+voidtickets.xyz
+
+! --- Purpose-registered hosts carrying many rotating proxy subdomains ---
+! Higher yield than the frontends above, since ||domain^ covers all subdomains.
+! Note goguardian.site is a deliberate lookalike of the filter vendor.
+mathmatics.ccwu.cc
+priestella.xyz
+becasuniversitarias.org
+bridgeportmath.org
+fukushimastudy.org
+task4z.dpdns.org
+share-with.uk
+shared2.uk
+dinocol.co.uk
+edu-spark.top
+next-education-learning.sbs
+schoology.lat
+vise.best
+mytutors.top
+goguardian.site
+snapclass.site
+phcode.site
+finishthought.xyz
+icemail.me.uk
+smelly.cc
+nlsn.cc
+flextron.xyz
+seanbrogan.xyz
+happy0.co.uk
+mattle.uk
+cokezero.uk
+vanillacoke.co.uk
+scramupdate.cfd
+christianity-rocks.cfd
+ihaventsleptfortwodays.space
+potatoesryummy.space
+sixseventimesfour.space
+lovestoblog.com
+fwh.is

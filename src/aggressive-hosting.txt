@@ -1,0 +1,32 @@
+! Free-hosting platforms mass-used for unblocked-game and proxy deployments.
+! Link counts are from a 46,852-link proxy dataset maintained to 2026-09-08.
+!
+! ACTIVE: abuse-only or effectively-dead platforms. Low risk for a developer.
+||dpdns.org^
+||fwh.is^
+||lovestoblog.com^
+||x10.mx^
+||wasmer.app^
+||w3spaces.com^
+||bitbucket.io^
+||glitch.me^
+||repl.co^
+||csb.app^
+||onrender.com^
+!
+! --- DISABLED: these break your own deploy previews ---
+! You ship to Vercel/Cloudflare/Firebase, so blanket-blocking these platforms
+! would take out your own preview URLs. Enable individually if you decide the
+! trade is worth it.
+! ||vercel.app^        (22 proxy links)
+! ||pages.dev^         (28 proxy links, Cloudflare Pages)
+! ||netlify.app^       (4 proxy links)
+! ||web.app^           (12 proxy links, Firebase Hosting)
+! ||firebaseapp.com^   (13 proxy links)
+! ||workers.dev^       (12 proxy links)
+!
+! --- NOT BLOCKABLE: shared infrastructure, would break the web ---
+! storage.googleapis.com is now the single largest vector (41,750 links) but is
+! all of Google Cloud Storage. Same for s3.amazonaws.com (576), cdn.jsdelivr.net
+! (1,146), esm.sh (334), cloudfront.net, sites.google.com, script.google.com.
+! github.io is now only 8 links and has heavy legitimate docs use - allowlisted.

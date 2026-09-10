@@ -1,0 +1,40 @@
+! now.gg / BlueStacks cloud-Android cluster - used to play Roblox and mobile
+! games in a browser, bypassing both app blocks and most gaming blocklists.
+! Established via shared TLS cert SANs with *.now.gg (crt.sh + CertSpotter),
+! then confirmed: these resolve into now.gg CloudFront ranges and serve
+! now.gg/BlueStacks markup. Certs are short-lived - re-audit quarterly.
+now.gg
+nowgg.me
+nowrun.io
+now.us
+mathsspot.com
+maths.media
+maths.news
+maths.services
+mathsinc.com
+mathsstudio.com
+mathstutor.life
+mathstutors.co
+newalgebra.com
+thetrignometry.com
+gostudymath.com
+thstudy.com
+restudythis.com
+selfstudybrain.com
+virtualstudybrain.com
+studyimages.com
+scienceproperties.com
+geometrying.com
+educationbluesky.com
+educationbluemoon.com
+universitybloomsny.com
+universityequality.com
+websitesball.com
+websitesbridge.com
+thewebsitesbridge.com
+doctoraux.com
+hotkitchenbag.com
+testngg.net
+bstkinternal.net
+abctest.in
+bluestacks.com

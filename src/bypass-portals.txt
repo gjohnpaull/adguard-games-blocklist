@@ -1,0 +1,44 @@
+! "Unblocked games" portals. HTTP-verified live 2026-09-10.
+! This section rots fast - these domains rotate deliberately. Re-audit quarterly.
+classroom6x.school
+classroom6x.lol
+classroom10x.com
+classroom60x.com
+classroom66.com
+6xgames.com
+ubg98.com
+ubghub.org
+ubgames.uk
+unblockedgameszone.com
+myunblockedgames.com
+duckmath.org
+3kh0.net
+3kh0.org
+geometryspot.com
+schplay.com
+7x.games
+azgames.io
+ottergames.org
+scary-games.com
+retrogames.my
+math-class.live
+outred.org
+mystudy.lol
+sz.games
+schoolschoolschool.com
+emupedia.net
+slopegamebox.com
+invisible-character.com
+ofogames.com
+pizzaedition.pro
+pizzaeditiongames.com
+aetheris.win
+selenite.cc
+55gms.com
+radon.games
+canlite.org
+
+! --- The durable ones: iframe/embed providers every portal uses ---
+! Blocking these kills the games regardless of which front domain serves them.
+gamedistribution.com
+gamemonetize.com

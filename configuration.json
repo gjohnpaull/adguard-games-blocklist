@@ -1,0 +1,94 @@
+{
+  "name": "Games Blocklist (compiled)",
+  "description": "Gaming sites for AdGuard Home. Upstream lists normalised to ||domain^ so subdomains are actually covered, with verified false positives stripped.",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "name": "UT1 Toulouse games",
+      "source": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/games/domains",
+      "type": "hosts"
+    },
+    {
+      "name": "JosuhaSanhueza GamesBlockList",
+      "source": "https://raw.githubusercontent.com/JosuhaSanhueza/BlockList/main/GamesBlockList.txt",
+      "type": "adblock"
+    },
+    {
+      "name": "dkorunic browser-games (incl. embed-CDN tier)",
+      "source": "https://raw.githubusercontent.com/dkorunic/browser-games-blocklist/main/hosts.txt",
+      "type": "adblock"
+    },
+    {
+      "name": "CasCas2 school-gaming",
+      "source": "https://raw.githubusercontent.com/CasCas2/school-gaming-dns-blocklist/main/mega-gaming-blocklist.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Local overlay (games missed by upstreams)",
+      "source": "src/overlay.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Single-game domains",
+      "source": "src/single-game-domains.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "International portals",
+      "source": "src/portals-international.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Browser emulators / ROM sites",
+      "source": "src/emulators.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Game embed CDNs",
+      "source": "src/embed-cdns.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Social / chat / creation game platforms",
+      "source": "src/platforms-social-games.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Unblocked-games portals",
+      "source": "src/bypass-portals.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Web proxies / unblockers",
+      "source": "src/bypass-proxies.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "now.gg mirror cluster",
+      "source": "src/nowgg-mirrors.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Cloud gaming endpoints",
+      "source": "src/cloud-gaming.txt",
+      "type": "hosts"
+    },
+    {
+      "name": "Google game surfaces",
+      "source": "src/google-games.txt",
+      "type": "hosts"
+    }
+  ],
+  "transformations": [
+    "Compress",
+    "RemoveComments",
+    "Deduplicate",
+    "Validate",
+    "TrimLines",
+    "RemoveEmptyLines",
+    "InsertFinalNewLine"
+  ],
+  "exclusions_sources": [
+    "src/exclusions.txt"
+  ]
+}

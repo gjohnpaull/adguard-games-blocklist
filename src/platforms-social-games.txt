@@ -1,0 +1,60 @@
+! Game-hosting platforms reached through social/chat apps and creation tools.
+! All verified live 2026-09-10.
+!
+! --- Discord activities / game bots ---
+discordsays.com
+discordsez.com
+discordactivities.com
+frvr.com
+joinplayroom.com
+dankmemer.lol
+poketwo.net
+owobot.com
+!
+! --- Telegram mini-app game platforms ---
+gamee.com
+playdeck.io
+tapps.center
+tapps.dev
+findmini.app
+minitelegram.com
+tgmini.net
+hamsterkombatgame.io
+hamsterkombat.io
+notcoingame.com
+blum.io
+catizen.ai
+memefi.club
+pixelverse.xyz
+xempire.io
+!
+! --- Scratch-style creation-and-hosting platforms ---
+! scratch.mit.edu is blocked by an upstream list already. These are the
+! modified clients and mirrors kids use when the main site is blocked.
+turbowarp.org
+packager.turbowarp.org
+penguinmod.com
+studio.penguinmod.com
+adacraft.org
+librekitten.org
+alpha.unsandboxed.org
+stretch3.champierre.com
+snap.berkeley.edu
+arcade.makecode.com
+gd.games
+gdevelop.io
+flowlab.io
+construct.net
+twinery.org
+sploder.com
+scratchjr.org
+!
+! --- Browser cloud-game streaming not already in cloud-gaming.txt ---
+clouddeck.app
+gamenow.gg
+ubitus.net
+maximumsettings.com
+oneplay.in
+playkey.net
+chikii.com
+parsec.app

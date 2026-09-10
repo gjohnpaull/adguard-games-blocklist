@@ -1,0 +1,26 @@
+!
+! Title: Games Blocklist - Aggressive TLD layer
+! Description: Whole-TLD blocking for game-dominated TLDs. Add as a SEPARATE blocklist in AdGuard Home so it can be toggled independently of the main list.
+! Version: 0.1.0
+! Last modified: 2026-09-10T15:01:13.884Z
+!
+! Compiled by @adguard/hostlist-compiler v2.1.1
+!
+||io^$denyallow=adguard-dns.io|adobe.io|balena.io|branch.io|cilium.io|codepen.io|crossplane.io|dagger.io|dckr.io|docker.io|draw.io|esphome.io|ghost.io|github.io|home-assistant.io|hoppscotch.io|k3s.io|k8s.io|kubernetes.io|longhorn.io|min.io|nextdns.io|opentelemetry.io|osquery.io|pnpm.io|portainer.io|prometheus.io|pulumi.io|sentry.io|shodan.io|snapcraft.io|socket.io|sssd.io|statically.io|swagger.io|traefik.io|zigbee2mqtt.io
+||games^
+||game^
+||gg^
+||lol^
+||fun^
+||onl^
+||dpdns.org^
+||fwh.is^
+||lovestoblog.com^
+||x10.mx^
+||wasmer.app^
+||w3spaces.com^
+||bitbucket.io^
+||glitch.me^
+||repl.co^
+||csb.app^
+||onrender.com^

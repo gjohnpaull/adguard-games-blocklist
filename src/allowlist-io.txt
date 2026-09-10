@@ -1,0 +1,45 @@
+! Legitimate .io domains exempted from the blanket ||io^ rule.
+! Every entry below was DNS-verified against 1.1.1.1 and is the project's
+! actual domain. Keep this list tight: in aggressive mode each entry is a hole.
+!
+! github.io IS exempted. Earlier assumption was wrong: in a 46,852-link proxy
+! dataset maintained to 2026-09-08 github.io accounts for only 8 links, while
+! storage.googleapis.com accounts for 41,750. It has heavy legitimate docs use,
+! so the trade no longer favours blocking it.
+docker.io
+dckr.io
+k8s.io
+k3s.io
+kubernetes.io
+traefik.io
+portainer.io
+longhorn.io
+cilium.io
+crossplane.io
+pulumi.io
+dagger.io
+prometheus.io
+opentelemetry.io
+min.io
+sentry.io
+adobe.io
+branch.io
+codepen.io
+draw.io
+swagger.io
+socket.io
+pnpm.io
+hoppscotch.io
+home-assistant.io
+esphome.io
+zigbee2mqtt.io
+balena.io
+snapcraft.io
+osquery.io
+sssd.io
+shodan.io
+adguard-dns.io
+nextdns.io
+ghost.io
+statically.io
+github.io

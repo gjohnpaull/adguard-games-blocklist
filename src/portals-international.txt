@@ -1,0 +1,89 @@
+! Non-English game portals. The UT1 base list is French-leaning and weak here.
+! All verified live 2026-09-10.
+! Spanish
+juegos.com
+juegos.games
+isladejuegos.com
+cokitos.com
+minijuegos.com
+minijuegos.mx
+cooljuegos.com
+! Portuguese / Brazil
+clickjogos.com.br
+ojogos.com.br
+jogos360.com.br
+minijogos.com.br
+1001jogos.com.br
+jogosnainternet.com.br
+jogos.com.br
+! Russian
+igroutka.ru
+flash4play.com
+igroflot.com
+flashterra.ru
+vseigru.net
+igru.net
+startgamer.ru
+gamaverse.ru
+okgamer.ru
+onlineigry.net
+gamelayer.ru
+mingame.ru
+game01.ru
+tanki.su
+! Turkish
+oyunskor.com
+oyunkolu.com
+kraloyun.com
+rekoroyun.com
+fixoyun.net
+tokoyun.com
+oyunlarskor.com
+ikikisilikoyunlar.net
+oyuncubey.com
+minikoyuncu.org
+! Indonesian / Vietnamese
+permainan.co.id
+girlsgogames.co.id
+gamevui.vn
+trochoivui.com
+okgamehay.com
+pikachucodien.net
+! India
+gamehindi.com
+gamezop.com
+zapak.com
+jiogames.com
+! Chinese / Japanese / Arabic
+4399.com
+game16.net
+hitoikigame.com
+game-ac.com
+unityroom.com
+g123.jp
+mizogames.com
+! German
+1001spiele.de
+jetztspielen.de
+spiele-umsonst.de
+spiele-kostenlos-online.de
+kostenlose-games.de
+spielen.com
+spielaffe.de
+spieleaffe.org
+browsergames.de
+! Polish
+gry.pl
+gryfek.pl
+grajteraz.pl
+gierkionline.pl
+funnygames.pl
+grymini.pl
+wyspagier.pl
+top-gry-online.pl
+portalmmo.pl
+! Italian / multilingual
+minigiochi.com
+sgames.org
+game-game.com
+allwebgames.com

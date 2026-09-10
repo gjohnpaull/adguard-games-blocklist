@@ -1,0 +1,42 @@
+! Google's game surfaces. Verified by network trace of a live
+! google.com/search?q=google+games page on 2026-09-10.
+!
+! ==========================================================================
+! NOT DNS-BLOCKABLE - do not waste time trying
+! ==========================================================================
+! The "Games from Google" carousel (Baseball, Snake, Solitaire, Minesweeper,
+! Block Breaker, PAC-MAN, Garden Gnomes, Color Tiles, Popcorn, Tic-Tac-Go,
+! Champion Island) renders INLINE in the search results page. The network
+! trace showed requests to only: google.com, gstatic.com, ogs.google.com,
+! fonts.gstatic.com, lh3.googleusercontent.com. There is no game-specific
+! host. Blocking any of those takes out Google Search, Gmail and Workspace.
+!
+! Google Doodle games live at the PATH google.com/logos/... - DNS has no
+! visibility into paths.
+!
+! Chrome's offline dinosaur game is at chrome://dino and is entirely local.
+! No network request is made at all. No network tool can block it.
+!
+! Doodle-game mirrors are hosted on sites.google.com/site/populardoodlegames
+! and /site/more. sites.google.com cannot be blocked without breaking
+! legitimate school and business Google Sites.
+!
+! ==========================================================================
+! BLOCKABLE
+! ==========================================================================
+! Chrome Web Store. This is the primary route to installing a proxy or VPN
+! browser extension, which is the main way a DNS filter gets bypassed - so it
+! is blocked here deliberately. TRADE-OFF: it also stops all extension
+! installs and updates, including AdGuard's own browser extension. Comment it
+! out if you would rather keep extension updates working.
+chromewebstore.google.com
+clients2.google.com
+!
+! Google Play Games web surface. play.google.com itself is NOT blocked - that
+! would break all Android app and security updates network-wide. These are the
+! narrower games-specific labels.
+gamesnacks.com
+!
+! --- Optional: educational, so off by default ---
+! Arts & Culture has a /play games section but is mostly a museum archive.
+! artsandculture.google.com

@@ -1,0 +1,25 @@
+{
+  "name": "Games Blocklist - Aggressive TLD layer",
+  "description": "Whole-TLD blocking for game-dominated TLDs. Add as a SEPARATE blocklist in AdGuard Home so it can be toggled independently of the main list.",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "name": "Game TLD rules",
+      "source": "src/aggressive-tlds.txt",
+      "type": "adblock"
+    },
+    {
+      "name": "Free-hosting platforms",
+      "source": "src/aggressive-hosting.txt",
+      "type": "adblock"
+    }
+  ],
+  "transformations": [
+    "RemoveComments",
+    "Deduplicate",
+    "ValidateAllowPublicSuffix",
+    "TrimLines",
+    "RemoveEmptyLines",
+    "InsertFinalNewLine"
+  ]
+}

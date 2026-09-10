@@ -1,0 +1,37 @@
+! Game embed / serving CDNs. This is the highest-leverage layer in the whole
+! project: nearly every portal iframes its games from one of these, so blocking
+! them kills the games no matter which front domain serves the page - including
+! domains that do not exist yet.
+! All verified live 2026-09-10.
+gamedistribution.com
+gamemonetize.com
+gamepix.com
+famobi.com
+gamesnacks.com
+softgames.com
+poki-cdn.com
+itch.zone
+ngfiles.com
+ungrounded.net
+applixir.com
+plays.org
+agame.com
+kongregate.com
+totallyscience.co
+! Narrower labels under apexes that must stay reachable
+game-cdn.poki.com
+kids.poki.com
+builds.crazygames.com
+games.crazygames.com
+imgs.crazygames.com
+api.crazygames.com
+cache.armorgames.com
+cdn.y8.com
+cdn2.y8.com
+playtomic.y8.com
+media.silvergames.com
+cdn.agame.com
+static.agame.com
+cdn.miniclip.com
+assets.miniclip.com
+games.yandex.com

@@ -1,0 +1,11 @@
+! Domains removed from the test set, with DNS status against 1.1.1.1 (2026-09-10).
+! NXDOMAIN = genuinely gone. SERVFAIL = registered but not resolving.
+snakelands.io     NXDOMAIN
+forestbrawl.io    NXDOMAIN
+fenfire.io        NXDOMAIN
+feartress.io      NXDOMAIN
+netquel.io        NXDOMAIN
+bitplanets.io     NXDOMAIN
+race.io           SERVFAIL
+blob.io           SERVFAIL
+66ez.com          NXDOMAIN - rotated away; typical of the unblocked-games churn

@@ -1,0 +1,19 @@
+! Hand-maintained overlay: domains missed by every upstream list.
+! Every entry DNS-verified against 1.1.1.1 on 2026-09-10.
+! Bare domains here; Compress turns them into ||domain^ at build time.
+
+! --- Games missed by all five upstream lists ---
+bloxd.io
+retrobowl.me
+tunnelrush.io
+geometrydash.io
+slopegame.io
+megaapps.online
+wizardwars.online
+1v1.lol
+
+! --- Filter-bypass / "unblocked games" front ends ---
+! These rotate constantly. Expect to add to this section by hand.
+nowgg.me
+mathsspot.com
+classroom6x.com

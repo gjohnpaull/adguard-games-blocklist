@@ -1,0 +1,16 @@
+{
+  "name": "adguard-games-blocklist",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gaming + game-bypass blocklist for AdGuard Home",
+  "scripts": {
+    "build": "npm run gen && npm run build:main && npm run build:aggressive",
+    "build:main": "hostlist-compiler -c configuration.json -o dist/games.txt -v",
+    "build:aggressive": "hostlist-compiler -c configuration.aggressive.json -o dist/games-aggressive.txt -v",
+    "test": "python scripts/verify.py",
+    "gen": "python scripts/gen_tld_rules.py"
+  },
+  "devDependencies": {
+    "@adguard/hostlist-compiler": "2.1.1"
+  }
+}

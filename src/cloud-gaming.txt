@@ -1,0 +1,36 @@
+! Cloud gaming endpoints. Narrow labels only where the vendor shares an apex
+! with non-gaming services - blocking those apexes would break Xbox accounts,
+! NVIDIA drivers or Amazon shopping.
+! Deliberately NOT blocked: xboxlive.com, xbox.com, xboxservices.com,
+! gamepass.com, nvidia.com, nvidiagrid.net, amazon.com, playstation.net,
+! cloudfront.net, amazonaws.com, play.google.com
+!
+! Known gap: Xbox Cloud Gaming's web client lives at the PATH xbox.com/play,
+! so DNS cannot block it without taking all of xbox.com. Use AdGuard Home's
+! Blocked Services -> xboxlive if you need that closed.
+! PS Plus Premium cloud streaming publishes no endpoint - not DNS-blockable.
+gssv-play-prod.xboxlive.com
+gssv-play-prodxhome.xboxlive.com
+geforcenow.com
+geforcenow.nvidiagrid.net
+gfn.nvidia.com
+gdn.nvidia.com
+tegrazone.com
+luna.amazon.com
+luna.amazon.co.uk
+luna.amazon.de
+luna.amazon.ca
+luna.amazon.at
+luna.amazon.eu
+luna.amazon.com.au
+luna.amazon.com.br
+luna.amazon.com.mx
+boosteroid.com
+starboost.com.ua
+shadow.tech
+blacknut.com
+antstream.com
+utomik.com
+airgpu.com
+netboom.com
+remoteplay.dl.playstation.net
